@@ -69,3 +69,5 @@ Contributions are welcome! Please follow these steps:
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+# interview-carsales
+This script consumes four csv files and produces datasets which help in predictive analysis of the customers payment obligations.

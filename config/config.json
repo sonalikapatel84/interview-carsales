@@ -1,0 +1,6 @@
+{
+    "accounts_file_path": "data/accounts.csv",
+    "skus_file_path": "data/skus.csv",
+    "invoices_file_path": "data/invoices.csv",
+    "invoice_line_items_file_path": "data/invoice_line_items.csv"
+}

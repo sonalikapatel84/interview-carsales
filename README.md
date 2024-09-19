@@ -20,8 +20,10 @@ This project implements an ETL (Extract, Transform, Load) pipeline using Apache 
 ## Installation steps and executing this job on Spark in Local Mode
     
     1. **Clone the Github repository:**
-        sh git clone https://github.com/sonalikapatel84/interview-carsales.git
-        cd interview-carsales
+       ** git clone https://github.com/sonalikapatel84/interview-carsales.git**
+        Note: This creates a folder in your home directory (Windows)
+        **cd interview-carsales**
+      
 
     2. **Set up the environment**:
         - Install Java (JDK 1.8.0_241 or later)
@@ -56,7 +58,7 @@ This project implements an ETL (Extract, Transform, Load) pipeline using Apache 
        pip install -r requirements.txt
 
 ## Run the ETL pipeline
-   python orchestrator.py
+   python jobs/orchestrator.py
    The output of the job is saved in the output folder, with a _SUCCESS file and a few .csv files containing the result. 
    On successful run it should show ![ETL Orchestrator Execution](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Orchestrator%20Run.png)
 ## Configuration

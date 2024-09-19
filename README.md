@@ -58,8 +58,7 @@ This project implements an ETL (Extract, Transform, Load) pipeline using Apache 
 ## Run the ETL pipeline
    python orchestrator.py
    The output of the job is saved in the output folder, with a _SUCCESS file and a few .csv files containing the result. 
-   On successful run it should show![image](https://github.com/user-attachments/assets/31bab480-725c-4da8-992a-5ce9ae0c67f1)
-
+   On successful run it should show ![ETL Orchestrator Execution](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Orchestrator%20Run.png)
 ## Configuration
     The configuration file `config/config.json` contains paths to the input CSV files and other settings. Update this file as needed
     json 
@@ -73,13 +72,12 @@ This project implements an ETL (Extract, Transform, Load) pipeline using Apache 
 ## Testing
 1. **Run all tests**:
     pytest .\tests\test_orchestrator.py
-    on successful run it should show ![image](https://github.com/user-attachments/assets/3caa40c5-ac90-4cdc-9917-da20638b5c71)
-   
+    on successful run it should show ![ETL Test Orcestrator Execution](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Test%20orchestrator%20run.png)
 
 2. **Test specific functionality**:
-      Individual tests can be also run ![image](https://github.com/user-attachments/assets/013bf9e3-622a-4aa4-b891-97cb6a23b228)
+      Individual tests can be also run 
     - Unit tests for individual functions
-    - Integration tests for the entire ETL pipeline
+    - Integration tests for the entire ETL pipeline ![ETL Single Test Orcestrator Execution](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Test%20orchestrator%20single%20test%20run.png)
 
 ## Design Choices
 - **Intermediate Data Models**: Parquet files are used for intermediate storage due to their efficiency and support for complex data types.

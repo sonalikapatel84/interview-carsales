@@ -1,5 +1,6 @@
 ## Table of Contents
 - [Carsales ETL Pipeline with Apache Spark.](#project-overview)
+- [Prerequisites](#Prerequisites)
 - [Installation steps and executing this job on Spark in Local Mode](#installation)
 - [Run the ETL pipeline](#run-pipeline)
 - [Configuration](#config)

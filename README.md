@@ -1,16 +1,16 @@
 ## Table of Contents
-- [Carsales ETL Pipeline with Apache Spark.](#project-overview)
-- [Prerequisites](#Prerequisites)
-- [Installation steps and executing this job on Spark in Local Mode](#installation)
-- [Run the ETL pipeline](#run-pipeline)
-- [Configuration](#config)
+- [Carsales ETL Pipeline with Apache Spark](#carsales-ETL-Pipeline-with-Apache-Spark)
+- [Prerequisites](#prerequisites)
+- [Installation steps and executing this job on Spark in Local Mode](#installation-steps-and-executing-this-job-on-Spark-in-Local-Mode)
+- [Run the ETL pipeline](#run-the-etl-pipeline)
+- [Configuration](#configuration)
 - [Testing](#testing)
-- [Design Choices](#design)
-- [Scaling Considerations](#scaling)
-- [Contributing](#contribute)
+- [Design Choices](#design-choices)
+- [Scaling Considerations](#scaling-considerations)
+- [Contributing](#contributing)
 - [License](#license)
 
-## Carsales ETL Pipeline with Apache Spark.
+## Carsales ETL Pipeline with Apache Spark
 This project implements an ETL (Extract, Transform, Load) pipeline using Apache Spark to process car sales data. The pipeline extracts raw data from CSV files, transforms it into meaningful features required by data scientists, and loads the processed data into Parquet files for downstream analytics.
 
 ## Prerequisites

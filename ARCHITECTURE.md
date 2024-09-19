@@ -1,18 +1,17 @@
 ## Table of Contents
-- [Production System Architecture](#Production-System-Architecture)
-- [Architecture Components](#Architecture-Components)
-- [Architecture Diagram](#Architecture Diagram)
-- [Key Architectural Decisions](#Key-Architectural-Decisions)
+- [Production System Architecture](#production-system-architecture)
+- [Architecture Components](#architecture-components)
+- [Architecture Diagram](#architecture-diagram)
+- [Evolution for Near Real Time Updates](#evolution-for-near-real-time-updates)
+- [Key Architectural Decisions](#key-architectural-decisions)
 - [Conclusion](#Conclusion)
 
-
-
-##Production System Architecture
+## Production System Architecture
   Overview
   The proposed architecture will support regular ETL jobs to process data from AWS Aurora MySQL databases and expose the resulting datasets to analysts and the finance team. 
   The architecture will also be designed to evolve for near real-time data updates once CDC is enabled and integrated with Kafka.
 
-##Architecture Components
+## Architecture Components
 
   Data Ingestion Layer
   AWS Aurora MySQL: The source of raw data.
@@ -32,10 +31,10 @@
   Orchestration and Scheduling
   Apache Airflow: Manages and schedules ETL workflows.
 
-##Architecture Diagram
+## Architecture Diagram
 ![As-Is Current Architecture](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Current-As-Is-state.png)
 
-Evolution for Near Real-Time Updates
+## Evolution for Near Real Time Updates
 
   CDC Integration
   Kafka: Once CDC is enabled, CDC events will be streamed to Kafka.
@@ -46,7 +45,7 @@ Evolution for Near Real-Time Updates
   Real-Time Data Processing
   Databricks Structured Streaming: Consumes CDC events from S3 and updates Delta Lake tables in near real-time.
 
-##Key Architectural Decisions
+## Key Architectural Decisions
 
   Data Storage
   Amazon S3: Chosen for its scalability and cost-effectiveness for storing raw and intermediate data.
@@ -62,5 +61,5 @@ Evolution for Near Real-Time Updates
   Databricks SQL Analytics: Provides a SQL interface for analysts and the finance team, ensuring they can query data using familiar SQL syntax.
   Power BI/Tableau: For advanced data visualization and reporting, integrating seamlessly with Databricks.
 
-##Conclusion
+## Conclusion
   This architecture ensures that the ETL jobs run efficiently and the resulting datasets are readily available for analysis. It is designed to evolve seamlessly to support near real-time data updates, ensuring that analysts and the finance team have     access to the most up-to-date data.

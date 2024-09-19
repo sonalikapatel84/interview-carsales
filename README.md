@@ -19,48 +19,51 @@ This project implements an ETL (Extract, Transform, Load) pipeline using Apache 
   
 ## Installation steps and executing this job on Spark in Local Mode
     
-    1. **Clone the Github repository:**
-       ** git clone https://github.com/sonalikapatel84/interview-carsales.git**
-        Note: This creates a folder in your home directory (Windows)
-        **cd interview-carsales**
+**Clone the Github repository:**
+
+   git clone https://github.com/sonalikapatel84/interview-carsales.git
+   
+   Note: This creates a folder in your home directory (Windows)
+   
+   cd interview-carsales
       
 
-    2. **Set up the environment**:
-        - Install Java (JDK 1.8.0_241 or later)
-        - Install Apache Spark (version 3.5.2 or later)
-            Apache Spark can be installed locally by downloading a pre-built package.
-            Steps:
-                Go to the Apache Spark download page.
-                Choose "Pre-built for Apache Hadoop" option and click Download Spark.
-                For Windows:
-                    Extract the downloaded .tgz file.
-                    Set SPARK_HOME environment variable to point to the Spark folder.
-                    Add %SPARK_HOME%\bin to the system's PATH.
-        - Install Python (version 3.12 or later)
-            If not https://www.python.org/downloads/release/python-3913/?source=post_page-----2eb2a27523a3--------------------------------
-            Verify by this comand -> **python --version**  
+**Set up the environment**:
 
-    3. **Set environment variables**:
-        (Linux)
-        export JAVA_HOME="C:\Program Files\Java\jdk1.8.0_241"
-        export SPARK_HOME="C:\Spark\spark-3.5.2-bin-hadoop3"
-        export PATH=$SPARK_HOME/bin:$PATH
-        export PYSPARK_PYTHON="C:\Python312\python.exe"
-        (Windows)
-        set JAVA_HOME="C:\Program Files\Java\jdk1.8.0_241"
-        set SPARK_HOME="C:\Spark\spark-3.5.2-bin-hadoop3"
-        set PATH=$SPARK_HOME/bin:$PATH
-        set PYSPARK_PYTHON="C:\Python312\python.exe"
+    Install Java (JDK 1.8.0_241 or later)
+    
+    Install Apache Spark (version 3.5.2 or later)
+        Apache Spark can be installed locally by downloading a pre-built package.
+        Steps:
+            Go to the Apache Spark download page.
+            Choose "Pre-built for Apache Hadoop" option and click Download Spark.
+            For Windows:
+                Extract the downloaded .tgz file.
+                Set SPARK_HOME environment variable to point to the Spark folder.
+                Add %SPARK_HOME%\bin to the system's PATH.
+                
+    Install Python (version 3.12 or later)
+        If not https://www.python.org/downloads/release/python-3913/?source=post_page-----2eb2a27523a3--------------------------------
+        Verify by this comand -> **python --version**  
+**Set environment variables**:
+    (Windows)
+    set JAVA_HOME="C:\Program Files\Java\jdk1.8.0_241"
+    set SPARK_HOME="C:\Spark\spark-3.5.2-bin-hadoop3"
+    set HADOOP_HOME="C:\hadoop"
+    set PYSPARK_PYTHON="C:\Python312\python.exe"
+    Additionally, ensure that the directories for JAVA_HOME, SPARK_HOME, and HADOOP_HOME are added to your PATH environment variable. You can do this by appending the following lines to your PATH variable:
+    set PATH=%PATH%;%JAVA_HOME%\bin;%SPARK_HOME%\bin;%HADOOP_HOME%\bin
 
-        Verify -> pyspark
 
-    4. **Install Python dependencies**:
-       pip install -r requirements.txt
+    Verify -> pyspark
+
+**Install Python dependencies**:
+   pip install -r requirements.txt
 
 ## Run the ETL pipeline
    python jobs/orchestrator.py
    The output of the job is saved in the output folder, with a _SUCCESS file and a few .csv files containing the result. 
-   On successful run it should show ![ETL Orchestrator Execution](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Orchestrator%20Run.png)
+   On successful run it should show ![ETL Orchestrator Execution](https://github.com/sonalikapatel84/interview-carsales/blob/main/assets/Output.png)
 ## Configuration
     The configuration file `config/config.json` contains paths to the input CSV files and other settings. Update this file as needed
     json 

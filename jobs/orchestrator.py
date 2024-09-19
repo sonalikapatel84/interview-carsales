@@ -1,7 +1,7 @@
 import subprocess
 from utils import create_spark_session
-from jobs.extract import load_config, extract_data
-from jobs.transform import join_dataframes, calculate_profit_per_invoice, calculate_profit_per_customer
+from extract import load_config, extract_data
+from transform import join_dataframes, calculate_profit_per_invoice, calculate_profit_per_customer
 
 
 def run_script(script_name):
@@ -82,6 +82,13 @@ def orchestrate():
     # Save the DataFrames to specified locations
     invoice_profit_df.write.mode('overwrite').parquet(output_invoice_path)
     customer_profit_df.write.mode('overwrite').parquet(output_customer_path)
+
+    # Print final DataFrames
+    print("Final DataFrames:")
+    print("Invoice Profit DataFrame:")
+    invoice_profit_df.show(truncate=False)
+    print("Customer Profit DataFrame:")
+    customer_profit_df.show(truncate=False)
     
     print(f"Data successfully saved to {output_invoice_path} and {output_customer_path}.")
 
